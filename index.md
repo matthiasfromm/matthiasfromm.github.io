@@ -2,9 +2,11 @@
 layout: default
 title: Matthias Fromm
 ---
-<div class="index">
-{% for post in paginator.posts %}
-  <h3><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h3>
-  <p>{{ post.excerpt | strip_html }}</p>
-{% endfor %}
-</div>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
