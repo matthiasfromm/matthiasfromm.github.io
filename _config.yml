@@ -80,15 +80,18 @@ JB :
 
 excerpt_separator: <!--more-->
 
-markdown: pandoc
-markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd
+markdown:      kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+textile_ext:   textile
 
-pandoc:
-  extensions:
-    - smart
-    - mathjax
-    - csl: _styles/apa.csl
-    - bibliography: bibliography/references.bib
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
+  input: GFM
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
