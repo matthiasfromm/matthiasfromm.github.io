@@ -8,15 +8,16 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
-
+title : Matthias Fromm
+name: Matthias Fromm
+tagline: Open Science Enthusiast & Podcaster
+author : 
+  name : Matthias Fromm
+  email : fromm@mfromm.de
+  github : matthiasfromm
+  twitter : matthiasfromm
+  feedburner : 
+  
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
@@ -25,7 +26,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://matthiasfromm.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -75,6 +76,20 @@ JB :
   atom_path : /atom.xml
   rss_path : /rss.xml
 
+# Settings for markdown
+
+excerpt_separator: <!--more-->
+
+markdown: pandoc
+markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd
+
+pandoc:
+  extensions:
+    - smart
+    - mathjax
+    - csl: _styles/apa.csl
+    - bibliography: bibliography/references.bib
+
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.
@@ -82,7 +97,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : 
     livefyre :
       site_id : 123
     intensedebate :
@@ -127,6 +142,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-  
-  # Setting for markdown interpreter
-  markdown: kramdown
